@@ -40,13 +40,26 @@ This project integrates a **ROS 2 Humble node**, a **Flask HTTP server**, and a 
 ```
 project-root/
 ├── ClientSide/
-│   ├── src/
-│   │   └── ros2_flask_comm/
-│   │       ├── ros2_flask_comm/
-│   │       │   └── blender_client.py       # ROS2 client node
-│   │       └── setup.py
-└── ServerSide/
-    └── flask_blender_server.py                      # Runs inside Blender
+│   └── src/
+│       └── ros2_flask_comm/
+│           ├── ros2_flask_comm/
+│           │   ├── __init__.py
+│           │   ├── blender_client.py       # Main ROS2 client implementation
+│           │   └── flask_client_node.py    # Alternative client for connection testing
+│           ├── resource/
+│           │   └── ros2_flask_comm
+│           ├── test/
+│           │   ├── test_copyright.py
+│           │   ├── test_flake8.py
+│           │   └── test_pep257.py
+│           ├── package.xml
+│           ├── setup.cfg
+│           └── setup.py
+├── ServerSide/
+│   ├── flask_blender_server.py            # Main server runs inside Blender
+│   └── flask_connection.py                # Alternative server for connection testing
+├── LICENSE                                
+└── README.md                              
 ```
 
 ---
